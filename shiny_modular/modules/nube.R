@@ -9,7 +9,6 @@ nubeUI <- function(id) {
 }
 
 ## Segmento del server
-
 nube <- function(input, output, session, frecuencia, maximo) {
   
   output$grafico <- renderPlot({
