@@ -9,6 +9,7 @@ library(shinydashboard)
 library(ggplot2)
 library(nycflights13)
 library(dplyr)
+
 # Cargar modulos ----------------------------------------------------------
 source("modules/nube.R")
 source("modules/deslizador.R")

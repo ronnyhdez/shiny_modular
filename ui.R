@@ -23,13 +23,14 @@ body <- dashboardBody(
     tabItem(
       tabName = "nube",
       fluidRow(
-          nubeUI("nube_palabras")
+          nubeUI("nube_palabras"),
+          nubeUI("nube_2")
       ),
       
       fluidRow(
         box(
-          deslizadorUI("deslizador_nuevo")
-          # deslizadorUI("deslizador_segudno")
+          deslizadorUI("deslizador_nuevo"),
+          deslizadorUI("deslizador_segundo")
         )
       )
     ),
