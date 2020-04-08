@@ -11,26 +11,28 @@ server <- function(input, output, session) {
   # Deslizadores lo tenemos como una lista con dos funciones
   print(deslizadores) # Para corrobar lo que viene de deslizadores
   
-  observeEvent(
-    (deslizadores$frec_input() | deslizadores$max_input()), {
-      
-      callModule(module = nube,
-                 id = "nube_palabras",
-                 frecuencia = deslizadores$frec_input(),
-                 maximo = deslizadores$max_input())  
-    }
-  )
+  observeEvent(input$goButton, {
+    frec <- deslizadores$frec_input()
+    max <- deslizadores$max_input()
+    
+        callModule(module = nube,
+                   id = "nube_palabras",
+                   frecuencia = frec,
+                   maximo = max)
+  })
   
-  observeEvent(
-    (deslizadores_dos$frec_input() | deslizadores_dos$max_input()), {
-      
-      callModule(module = nube,
-                 id = "nube_2",
-                 frecuencia = deslizadores_dos$frec_input(),
-                 maximo = deslizadores_dos$max_input())  
-    }
-  )
   
+  # observeEvent(
+  #   (deslizadores$frec_input() | deslizadores$max_input()), {
+  #     
+  #     callModule(module = nube,
+  #                id = "nube_palabras",
+  #                frecuencia = deslizadores$frec_input(),
+  #                maximo = deslizadores$max_input())  
+  #   }
+  # )
+
+
   
   
   ## Otros segmentos -----------------------------------------------------------
