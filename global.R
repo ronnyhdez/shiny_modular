@@ -9,12 +9,20 @@ library(shinydashboard)
 library(ggplot2)
 library(nycflights13)
 library(dplyr)
+library(shinymanager)
 
 # Cargar modulos ----------------------------------------------------------
 source("modules/nube.R")
 source("modules/deslizador.R")
 source("modules/grafico.R")
 source("modules/seleccionador.R")
+
+credentials <- data.frame(
+  user = c("ronny", "german"),
+  password = c("ixpantia", "12345"),
+  admin = c(FALSE, TRUE),
+  stringsAsFactors = FALSE
+)
 
 # Leer archivo ------------------------------------------------------------
 text <- readLines("words")

@@ -29,8 +29,8 @@ body <- dashboardBody(
       
       fluidRow(
         box(
-          deslizadorUI("deslizador_nuevo")
-          # deslizadorUI("deslizador_segundo")
+          deslizadorUI("deslizador_nuevo"),
+          deslizadorUI("deslizador_segundo")
         )
       ),
       actionButton("goButton", "Go!")
@@ -53,9 +53,10 @@ body <- dashboardBody(
 )
 
 ## App completo ----------------------------------------------------------------
-dashboardPage(
+secure_app(dashboardPage(
   skin = "black",
   header,
   sidebar,
   body
+)
 )
